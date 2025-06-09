@@ -1,0 +1,314 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap:VirtualizedContainerService.HintSize="668,525.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umae="clr-namespace:UiPath.Mail.Activities.Enums;assembly=UiPath.Mail.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.Mail.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Mail.Activities.Business.ForEachMail</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System.Console</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Enums</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices.RuntimeInformation</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="671.6,3888.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="matchedAttachmentName" />
+      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="invoiceEmails" />
+      <Variable x:TypeArguments="x:String" Name="jsonBody" />
+      <Variable x:TypeArguments="x:String" Name="summaryResponse" />
+      <Variable x:TypeArguments="njl:JObject" Name="jsonObject" />
+      <Variable x:TypeArguments="x:String" Name="summary" />
+      <Variable x:TypeArguments="x:String" Name="apiKey" />
+      <Variable x:TypeArguments="x:String" Name="replyBodyText" />
+      <Variable x:TypeArguments="x:Boolean" Name="isPaid" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtResult" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" FilterExpression="{x:Null}" SecurePassword="{x:Null}" UseOAuth="{x:Null}" ConnectionId="bd74f43a-d905-4fed-8746-74e2d18a5f0f" ConnectionMode="LegacyConfiguration" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="arijeetsinha9@gmail.com" EnableSSL="True" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="572.8,174.4" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" IgnoreCRL="False" MailFolder="INBOX" MarkAsRead="True" Messages="[invoiceEmails]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Password="lwvi qjtu cvkg gfvv" Port="993" SecureConnection="Auto" Server="imap.gmail.com" TimeoutMS="30000" Top="2" UseISConnection="False">
+      <ui:GetIMAPMailMessages.ConnectionDetailsBackupSlot>
+        <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="LegacyConfiguration">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </ui:GetIMAPMailMessages.ConnectionDetailsBackupSlot>
+    </ui:GetIMAPMailMessages>
+    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each currentMail" sap:VirtualizedContainerService.HintSize="572.8,3691.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[invoiceEmails]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="snm:MailMessage">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="currentMail" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="571.2,3569.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If Condition="[currentMail.Attachments.OfType(Of System.Net.Mail.Attachment)().Any(Function(att) System.Text.RegularExpressions.Regex.IsMatch(att.Name, &quot;^[A-Za-z0-9]+\.[A-Za-z0-9]+$&quot;, System.Text.RegularExpressions.RegexOptions.IgnoreCase))]" DisplayName="Only process if attachment-name matches transactionId" sap:VirtualizedContainerService.HintSize="537.6,3509.6" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="536,3290.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="ui:DatabaseConnection" Name="dbConnection" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:SaveMailAttachments Attachments="{x:Null}" ResourceAttachments="{x:Null}" DisplayName="Save Attachments" ExcludeInlineAttachments="False" Filter=".*" FolderPath="D:\RPA\UIPath\EmailAttachments\" sap:VirtualizedContainerService.HintSize="502.4,226.4" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_1" Message="[currentMail]" OverwriteExisting="True" />
+                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="Try&#xA;    Dim emailBody As String = &quot;&quot;&#xA;    &#xA;    If currentMail IsNot Nothing AndAlso currentMail.Body IsNot Nothing Then&#xA;        emailBody = If(currentMail.IsBodyHtml, currentMail.Body.ToString(), currentMail.Body.ToString())&#xA;    Else&#xA;        emailBody = &quot;[No email body content]&quot;&#xA;    End If&#xA;&#xA;    ' Clean the email body&#xA;    If Not String.IsNullOrEmpty(emailBody) Then&#xA;        emailBody = emailBody.Replace(&quot;\&quot;, &quot;\\&quot;)&#xA;        emailBody = emailBody.Replace(&quot;&quot;&quot;&quot;, &quot;\&quot;&quot;&quot;)&#xA;        emailBody = emailBody.Replace(Chr(13), &quot; &quot;).Replace(Chr(10), &quot; &quot;)&#xA;        emailBody = New String(emailBody.Where(Function(c) Not Char.IsControl(c)).ToArray())&#xA;    Else&#xA;        emailBody = &quot;[No email body content after cleaning]&quot;&#xA;    End If&#xA;&#xA;    ' Create Ollama-compatible JSON payload&#xA;    Dim jsonObj As New Newtonsoft.Json.Linq.JObject(&#xA;        New Newtonsoft.Json.Linq.JProperty(&quot;model&quot;, &quot;llama2&quot;), ' or any model you have installed&#xA;        New Newtonsoft.Json.Linq.JProperty(&quot;messages&quot;, New Newtonsoft.Json.Linq.JArray(&#xA;            New Newtonsoft.Json.Linq.JObject(&#xA;                New Newtonsoft.Json.Linq.JProperty(&quot;role&quot;, &quot;system&quot;),&#xA;                New Newtonsoft.Json.Linq.JProperty(&quot;content&quot;, &quot;You are a helpful assistant that summarizes emails concisely in 2-3 sentences.&quot;)&#xA;            ),&#xA;            New Newtonsoft.Json.Linq.JObject(&#xA;                New Newtonsoft.Json.Linq.JProperty(&quot;role&quot;, &quot;user&quot;),&#xA;                New Newtonsoft.Json.Linq.JProperty(&quot;content&quot;, &quot;Summarize this email: &quot; &amp; emailBody)&#xA;            )&#xA;        )),&#xA;        New Newtonsoft.Json.Linq.JProperty(&quot;stream&quot;, False)&#xA;    )&#xA;&#xA;    jsonBody = jsonObj.ToString(Newtonsoft.Json.Formatting.None)&#xA;&#xA;Catch ex As Exception&#xA;    Console.WriteLine(&quot;Error generating JSON: &quot; &amp; ex.Message)&#xA;    jsonBody = &quot;{&quot;&quot;error&quot;&quot;:&quot;&quot;Failed to generate JSON: &quot; &amp; ex.Message.Replace(&quot;&quot;&quot;&quot;, &quot;'&quot;) &amp; &quot;&quot;&quot;}&quot;&#xA;End Try" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="502.4,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+                    <ui:InvokeCode.Arguments>
+                      <InArgument x:TypeArguments="snm:MailMessage" x:Key="currentMail">[currentMail]</InArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="jsonBody">[jsonBody]</OutArgument>
+                    </ui:InvokeCode.Arguments>
+                  </ui:InvokeCode>
+                  <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Caption="JSON Validation" DisplayName="Show JSON Body" sap:VirtualizedContainerService.HintSize="502.4,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[jsonBody]" />
+                  <ui:LogMessage DisplayName="Log jsonBody after Invoke Code" sap:VirtualizedContainerService.HintSize="502.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_New" Level="Info" Message="[&quot;jsonBody value for length check: ' &quot; + jsonBody + &quot; '&quot;]" />
+                  <ui:LogMessage DisplayName="Log JSON Length" sap:VirtualizedContainerService.HintSize="502.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;JSON Length: &quot; + jsonBody.Length.ToString()]" />
+                  <ui:LogMessage DisplayName="Log JSON Body" sap:VirtualizedContainerService.HintSize="502.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;JSON Body: &quot; + jsonBody]" />
+                  <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[jsonBody]" BodyFormat="application/json" DisplayName="Send to Ollama" EnableSSLVerification="True" EndPoint="http://localhost:11434/api/chat" sap:VirtualizedContainerService.HintSize="502.4,103.2" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[summaryResponse]" TimeoutMS="60000">
+                    <ui:HttpClient.Attachments>
+                      <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                    </ui:HttpClient.Attachments>
+                    <ui:HttpClient.Cookies>
+                      <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                    </ui:HttpClient.Cookies>
+                    <ui:HttpClient.Headers>
+                      <InArgument x:TypeArguments="x:String" x:Key="Content-Type">["application/json"]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Accept">["application/json"]</InArgument>
+                    </ui:HttpClient.Headers>
+                    <ui:HttpClient.Parameters>
+                      <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                    </ui:HttpClient.Parameters>
+                    <ui:HttpClient.UrlSegments>
+                      <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                    </ui:HttpClient.UrlSegments>
+                  </ui:HttpClient>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="SummaryResponse" sap:VirtualizedContainerService.HintSize="502.4,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[summaryResponse]" />
+                  <Assign x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="502.4,54.4" sap2010:WorkflowViewState.IdRef="Assign`1_3" To="[jsonObject]" Value="[Newtonsoft.Json.Linq.JObject.Parse(summaryResponse)]" />
+                  <Assign x:TypeArguments="x:String" DisplayName="Extract Summary" sap:VirtualizedContainerService.HintSize="502.4,54.4" sap2010:WorkflowViewState.IdRef="Assign`1_2" To="[summary]" Value="[jsonObject(&quot;message&quot;)(&quot;content&quot;).ToString().Trim()]" />
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Show Summary" sap:VirtualizedContainerService.HintSize="502.4,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[summary]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="502.4,115.2" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[matchedAttachmentName]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String" xml:space="preserve">[System.IO.Path.GetFileNameWithoutExtension( _
+    currentMail.Attachments _
+        .OfType(Of System.Net.Mail.Attachment)() _
+        .Where(Function(att) System.Text.RegularExpressions.Regex.IsMatch(att.Name, "^[A-Za-z0-9]+\.[A-Za-z0-9]+$", System.Text.RegularExpressions.RegexOptions.IgnoreCase)) _
+        .First().Name)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:DatabaseConnect DisplayName="Connect to Database" sap:VirtualizedContainerService.HintSize="502.4,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="Microsoft.Data.SqlClient" ConnectionString="Data Source=LAPTOP-EFRAI7KQ;Initial Catalog=Transactions;Integrated Security=True;Encrypt=False" DatabaseConnection="[dbConnection]" />
+                  <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dtResult]" DisplayName="Run Query" ExistingDbConnection="[dbConnection]" sap:VirtualizedContainerService.HintSize="502.4,147.2" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="Select COUNT(*) As MatchCount From PaidTransactions Where TransactionID = @transId And Status = 'Paid'">
+                    <ui:ExecuteQuery.Parameters>
+                      <InArgument x:TypeArguments="x:String" x:Key="transId">[matchedAttachmentName]</InArgument>
+                    </ui:ExecuteQuery.Parameters>
+                  </ui:ExecuteQuery>
+                  <Assign sap:VirtualizedContainerService.HintSize="502.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Boolean">[isPaid]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Boolean">[(CInt(dtResult.Rows(0)("MatchCount")) &gt; 0)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:DatabaseDisconnect DatabaseConnection="[dbConnection]" DisplayName="Disconnect from Database" sap:VirtualizedContainerService.HintSize="502.4,56.8" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
+                  <If Condition="[isPaid]" sap:VirtualizedContainerService.HintSize="502.4,469.6" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign DisplayName="Formulate Reply Body" sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_FormulateReply">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[replyBodyText]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["Dear Sender," &amp; vbCrLf &amp; vbCrLf &amp; "Thank you For your payment. Your transaction ID " &amp; matchedAttachmentName &amp; " has been successfully paid." &amp; vbCrLf &amp; vbCrLf &amp; "We appreciate your prompt payment. If you have any questions, feel free To reach Out." &amp; vbCrLf &amp; vbCrLf &amp; "Best regards," &amp; vbCrLf &amp; "Automated Mail Assistant"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="467.2,166.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign DisplayName="Formulate Reply Body" sap:VirtualizedContainerService.HintSize="433.6,106.4" sap2010:WorkflowViewState.IdRef="Assign_4">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[replyBodyText]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String" xml:space="preserve">["Dear Sender," &amp; vbCrLf &amp; vbCrLf &amp;
+"Our records indicate that transaction ID " &amp; matchedAttachmentName &amp; " is not yet paid. Please proceed with payment at your earliest convenience." &amp; vbCrLf &amp; vbCrLf &amp;
+"If you believe this is an error, please contact our billing department." &amp; vbCrLf &amp; vbCrLf &amp;
+"Best regards," &amp; vbCrLf &amp;
+"Automated Mail Assistant"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Caption="Automated Reply Preview" DisplayName="Show Automated Reply Preview" sap:VirtualizedContainerService.HintSize="502.4,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_ReplyPreview" Text="[replyBodyText]" />
+                  <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" Email="{x:Null}" From="{x:Null}" Name="{x:Null}" Password="{x:Null}" Port="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" Server="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" AttachmentInputMode="Existing" Body="[replyBodyText]" ConnectionId="bd74f43a-d905-4fed-8746-74e2d18a5f0f" ConnectionMode="IntegrationService" DisplayName="Send SMTP Mail Message - Automated Reply (SendSMTPMail)" EnableSSL="True" sap:VirtualizedContainerService.HintSize="502.4,332" sap2010:WorkflowViewState.IdRef="SendMail_3" IgnoreCRL="False" IsBodyHtml="False" MailMessage="[currentMail]" SecureConnection="Auto" Subject="[&quot;Re: [Automated Summary] &quot; + currentMail.Subject]" To="[currentMail.From.Address]" UseISConnection="True">
+                    <ui:SendMail.AttachmentsBackup>
+                      <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </ui:SendMail.AttachmentsBackup>
+                    <ui:SendMail.ConnectionDetailsBackupSlot>
+                      <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="IntegrationService">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </ui:SendMail.ConnectionDetailsBackupSlot>
+                    <ui:SendMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                    </ui:SendMail.Files>
+                  </ui:SendMail>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="536,89.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+  </Sequence>
+</Activity>
